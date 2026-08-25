@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Javiera & Daniel | 06.03.2027</title>
+
+  <!-- TIPOGRAFÍAS -->
+  <link rel="preconnect" href="Calligraphy.otf">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="Style.css">
+
+</head>
+
+<body>
+
+
+  <!-- ==================================================
+       PANTALLA INICIAL / SOBRE
+  =================================================== -->
+
+  <div
+    class="card-opening-screen"
+    id="cardOpeningScreen"
+  >
+
+    <div class="wedding-card-wrapper">
+
+      <div
+        class="wedding-card"
+        id="weddingCard"
+      >
+
+  <!-- ==============================
+  INTERIOR DE LA INVITACIÓN
+  =============================== -->
+  <div class="card-inside">
+    <div class="card-inside-content">
+      <p class="inside-small">
+        CON MUCHO AMOR
+      </p>
+
+      <p class="inside-intro">
+      Tenemos el agrado de invitarte
+      a celebrar junto a nosotros
+      </p>
+
+       <h2 class="couple-name">
+         <span class="name-first">Javiera</span>
+        <span class="name-second">& Daniel</span>
+       </h2>
+
+        <p class="inside-date">
+        06 · MARZO · 2027
+        </p>
+
+        <p class="inside-time">
+        16:00 HRS
+        </p>
+
+        <p class="inside-place">
+        ALGARROBO · CHILE
+        </p>
+
+            <button
+              class="enter-invitation-button"
+              id="enterInvitationButton"
+              type="button"
+            >
+              Ver invitación
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <!-- ==============================
+             SOBRE / TAPA
+        =============================== -->
+
+        <div
+          class="card-cover"
+          id="cardCover"
+        >
+
+          <div class="envelope-paper"></div>
+
+          <!-- LÍNEAS CAFÉ -->
+          <div class="envelope-line line-bottom-left"></div>
+          <div class="envelope-line line-bottom-right"></div>
+
+          <!-- BOTÓN DORADO -->
+          <button
+            class="gold-seal"
+            id="goldSeal"
+            type="button"
+            aria-label="Abrir invitación"
+          >
+            <span>J</span>
+            <small>&</small>
+            <span>D</span>
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- INDICACIÓN -->
+
+      <div class="opening-instruction">
+
+        <p>
+          Nuestra invitación
+        </p>
+
+        <small>
+          Toca el boton dorado
+        </small>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- ==================================================
+       PORTADA PRINCIPAL
+  =================================================== -->
+
+  <header class="hero">
+
+    <div class="hero-frame"></div>
+
+    <div class="hero-content">
+
+      <p class="hero-small">
+        Nos casamos
+      </p>
+
+       <h1 class="couple-name">
+         <span class="name-first">Javiera</span>
+        <span class="name-second">& Daniel</span>
+       </h1>
+
+      <div class="hero-line"></div>
+
+      <p class="hero-date">
+        06 · 03 · 2027
+      </p>
+
+      <p class="hero-time">
+        16:00 hrs
+      </p>
+
+    </div>
+
+  </header>
+
+
+
+  <main>
+    <!-- ==================================================
+         MENSAJE
+    =================================================== -->
+
+    <section class="intro">
+
+      <div class="container">
+
+        <span class="decorative-symbol">
+          ✦
+        </span>
+
+        <p class="intro-text">
+          Queremos compartir contigo
+          uno de los días más importantes
+          de nuestras vidas.
+        </p>
+
+        <p class="intro-secondary">
+          Nos haría muy felices
+          contar con tu presencia.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         FOTOS DE NIÑOS
+    =================================================== -->
+
+    <section class="childhood-section">
+
+      <div class="container">
+
+        <div class="section-title">
+
+          <p>
+            Un pequeño recuerdo
+          </p>
+
+          <div class="title-line"></div>
+
+        </div>
+
+        <div class="childhood-grid">
+
+
+          <!-- JAVIERA -->
+
+          <div class="child-card">
+
+            <div class="photo-placeholder">
+              <img src="Img/Javiera2.jpeg" alt="fotojaviera">
+            </div>
+            <h3>
+              Javiera
+            </h3>
+
+          </div>
+
+          <div class="child-heart">
+            ♡
+          </div>
+
+
+          <!-- DANIEL -->
+
+          <div class="child-card">
+
+            <div class="photo-placeholder">
+              <img src="Img/Daniel.jpeg" alt="fotoDaniel">
+            </div>
+
+            <h3>
+              Daniel
+            </h3>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ==================================================
+         CUENTA REGRESIVA
+    =================================================== -->
+
+    <section
+      id="contador"
+      class="countdown-section"
+    >
+
+      <div class="container">
+
+        <div class="section-title">
+
+          <p>
+            Falta muy poco
+          </p>
+
+          <h2>
+            Cuenta regresiva
+          </h2>
+
+          <div class="title-line"></div>
+
+        </div>
+
+
+        <div class="countdown">
+
+          <div class="countdown-item">
+
+            <span id="days">
+              000
+            </span>
+
+            <small>
+              Días
+            </small>
+
+          </div>
+
+
+          <div class="countdown-item">
+
+            <span id="hours">
+              00
+            </span>
+
+            <small>
+              Horas
+            </small>
+
+          </div>
+
+
+          <div class="countdown-item">
+
+            <span id="minutes">
+              00
+            </span>
+
+            <small>
+              Minutos
+            </small>
+
+          </div>
+
+
+          <div class="countdown-item">
+
+            <span id="seconds">
+              00
+            </span>
+
+            <small>
+              Segundos
+            </small>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ==================================================
+         FECHA
+    =================================================== -->
+<section class="date-section">
+
+  <div class="container date-layout">
+
+    <!-- FOTO IZQUIERDA -->
+    <div class="date-photo date-photo-left">
+      <img
+        src="Img/Piojosos1.jpeg"
+        alt="Javiera"
+      >
+    </div>
+
+
+    <!-- FECHA CENTRAL -->
+    <div class="date-center">
+
+      <div class="date-content">
+
+        <span class="date-day">
+          06
+        </span>
+
+        <div class="date-divider"></div>
+
+        <div class="date-info">
+
+          <span>
+            Marzo
+          </span>
+
+          <strong>
+            2027
+          </strong>
+
+        </div>
+
+      </div>
+
+      <p class="date-time">
+        Sábado · 16:00 hrs
+      </p>
+
+    </div>
+
+
+    <!-- FOTO DERECHA -->
+    <div class="date-photo date-photo-right">
+      <img
+        src="Img/Piojosos3.jpeg"
+        alt="Daniel"
+      >
+    </div>
+
+  </div>
+
+</section>
+
+    <!-- ==================================================
+         ITINERARIO
+    =================================================== -->
+
+    <section class="timeline-section">
+      <div class="container">
+        <div class="section-title">
+          <p>
+            Nuestro día
+          </p>
+
+          <h2>
+            Itinerario
+          </h2>
+
+          <div class="title-line"></div>
+
+        </div>
+
+
+        <div class="timeline">
+
+
+          <!-- CEREMONIA -->
+
+          <div class="timeline-item">
+
+            <div class="timeline-left">
+
+              <div class="timeline-icon">
+
+                <svg
+                  viewBox="0 0 64 64"
+                  aria-hidden="true"
+                >
+                  <path d="M18 54V26l14-12 14 12v28" />
+                  <path d="M25 54V37h14v17" />
+                  <path d="M32 14V6" />
+                  <path d="M28 10h8" />
+                </svg>
+
+              </div>
+
+            </div>
+
+            <div class="timeline-info">
+
+              <span class="timeline-hour">
+                16:00 hrs
+              </span>
+
+              <h3>
+                Ceremonia
+              </h3>
+
+              <p>
+                Comenzamos este día
+                celebrando nuestro sí.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <!-- RESTAURANTE -->
+
+          <div class="timeline-item">
+
+            <div class="timeline-left">
+
+              <div class="timeline-icon">
+
+                <svg
+                  viewBox="0 0 64 64"
+                  aria-hidden="true"
+                >
+
+                  <path d="M17 9v20" />
+
+                  <path
+                    d="M11 9v12c0 5 3 8 6 8s6-3 6-8V9"
+                  />
+
+                  <path d="M17 29v26" />
+
+                  <path d="M43 9v46" />
+
+                  <path
+                    d="M43 9c8 8 9 18 0 25"
+                  />
+
+                </svg>
+
+              </div>
+
+            </div>
+
+            <div class="timeline-info">
+
+              <span class="timeline-hour">
+                Horario por definir
+              </span>
+
+              <h3>
+                Restaurante
+              </h3>
+
+              <p>
+                Continuaremos celebrando juntos
+                en Macerado Algarrobo.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <!-- FIESTA -->
+
+          <div class="timeline-item">
+
+            <div class="timeline-left">
+
+              <div class="timeline-icon">
+
+                <svg
+                  viewBox="0 0 64 64"
+                  aria-hidden="true"
+                >
+
+                  <path
+                    d="M32 8l4.5 14.5L51 27l-14.5 4.5L32 46l-4.5-14.5L13 27l14.5-4.5z"
+                  />
+
+                  <path d="M48 11v10" />
+                  <path d="M43 16h10" />
+                  <path d="M15 43v8" />
+                  <path d="M11 47h8" />
+
+                </svg>
+
+              </div>
+
+            </div>
+
+            <div class="timeline-info">
+
+              <span class="timeline-hour">
+                Horario por definir
+              </span>
+
+              <h3>
+                Fiesta
+              </h3>
+
+              <p>
+                Terminamos en el quincho
+                celebrando, bailando
+                y disfrutando juntos.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         UBICACIÓN
+    =================================================== -->
+
+    <section class="location-section">
+
+      <div class="container">
+
+        <div class="location-symbol">
+
+          <svg viewBox="0 0 64 64">
+
+            <path
+              d="M32 58s18-17 18-34A18 18 0 0 0 14 24c0 17 18 34 18 34z"
+            />
+
+            <circle
+              cx="32"
+              cy="24"
+              r="6"
+            />
+
+          </svg>
+
+        </div>
+
+        <p class="location-small">
+          Ceremonia & celebración
+        </p>
+
+        <h2>
+          Macerado Algarrobo
+        </h2>
+
+        <p class="location-address">
+          Las Tinajas 2678
+          <br>
+          Algarrobo, Región de Valparaíso
+        </p>
+
+        <a
+          href="https://www.google.com/maps/search/?api=1&query=Macerado+Algarrobo+Las+Tinajas+2678"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="main-button"
+        >
+          Cómo llegar
+        </a>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         DRESS CODE
+    =================================================== -->
+
+    <section class="dress-section">
+
+      <div class="container">
+
+        <div class="section-title">
+
+          <p>
+            Código de vestimenta
+          </p>
+
+          <h2>
+            Dress Code
+          </h2>
+
+          <div class="title-line"></div>
+
+        </div>
+
+        <div class="dress-image-container">
+
+          <img
+            src="Img/imagen dress code.png"
+            alt="Dress Code Javiera y Daniel"
+            id="dressCodeImage"
+          >
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         REGALOS
+    =================================================== -->
+
+    <section class="gift-section">
+
+      <div class="container">
+
+        <div class="gift-icon">
+
+          <svg viewBox="0 0 64 64">
+
+            <rect
+              x="12"
+              y="27"
+              width="40"
+              height="27"
+            />
+
+            <path d="M9 20h46v10H9z" />
+
+            <path d="M32 20v34" />
+
+            <path
+              d="M32 20c-8 0-14-2-14-7 0-4 3-6 7-6 5 0 7 7 7 13z"
+            />
+
+            <path
+              d="M32 20c8 0 14-2 14-7 0-4-3-6-7-6-5 0-7 7-7 13z"
+            />
+
+          </svg>
+
+        </div>
+
+        <p class="gift-small">
+          Regalos
+        </p>
+
+        <h2>
+          Tu presencia es nuestro mejor regalo
+        </h2>
+
+        <p class="gift-text">
+          Si deseas hacernos un regalo,
+          tendremos disponible nuestra
+          lista de novios.
+        </p>
+
+        <button
+          id="giftButton"
+          class="main-button"
+          type="button"
+        >
+          Ver lista de regalos Falabella
+        </button>
+
+        <p class="gift-pending">
+          Próximamente
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- ==================================================
+         CIERRE
+    =================================================== -->
+    <footer class="footer">
+      <div class="container">
+        <p class="footer-small">
+          Gracias por acompañarnos
+        </p>
+
+       <h2 class="couple-name">
+         <span class="name-first">Javiera</span>
+        <span class="name-second">& Daniel</span>
+       </h2>
+
+        <div class="footer-line"></div>
+        <p class="footer-date">
+          06 · 03 · 2027
+        </p>
+
+        <p class="footer-place">
+          Algarrobo · Chile
+        </p>
+      </div>
+    </footer>
+
+  </main>
+
+
+  <!-- JAVASCRIPT -->
+  <script src="Script.js"></script>
+
+</body>
+</html>
