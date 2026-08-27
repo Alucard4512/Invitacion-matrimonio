@@ -1685,7 +1685,7 @@ section {
   justify-self: start;
 
   transform:
-    rotate(7deg);
+    rotate(-7deg);
 
   margin-top: 0;
 }
@@ -1699,7 +1699,7 @@ section {
   justify-self: end;
 
   transform:
-    rotate(-7deg);
+    rotate(7deg);
 
   margin-top: 0;
 }
