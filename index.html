@@ -12,7 +12,7 @@
   <title>Javiera & Daniel | 06.03.2027</title>
 
   <!-- TIPOGRAFÍAS -->
-  <link rel="preconnect" href="Calligraphy.otf">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
 
   <link
     rel="preconnect"
@@ -49,54 +49,7 @@
         id="weddingCard"
       >
 
-  <!-- ==============================
-  INTERIOR DE LA INVITACIÓN
-  =============================== -->
-  <div class="card-inside">
-    <div class="card-inside-content">
-      <p class="inside-small">
-        CON MUCHO AMOR
-      </p>
-
-      <p class="inside-intro">
-      Tenemos el agrado de invitarte
-      a celebrar junto a nosotros
-      </p>
-
-       <h2 class="couple-name">
-         <span class="name-first">Javiera</span>
-        <span class="name-second">& Daniel</span>
-       </h2>
-
-        <p class="inside-date">
-        06 · MARZO · 2027
-        </p>
-
-        <p class="inside-time">
-        16:00 HRS
-        </p>
-
-        <p class="inside-place">
-        ALGARROBO · CHILE
-        </p>
-
-            <button
-              class="enter-invitation-button"
-              id="enterInvitationButton"
-              type="button"
-            >
-              Ver invitación
-            </button>
-
-          </div>
-
-        </div>
-
-
-        <!-- ==============================
-             SOBRE / TAPA
-        =============================== -->
-
+        <!-- SOBRE -->
         <div
           class="card-cover"
           id="cardCover"
@@ -105,24 +58,37 @@
           <div class="envelope-paper"></div>
 
           <!-- LÍNEAS CAFÉ -->
+          <div class="envelope-line line-left"></div>
+          <div class="envelope-line line-right"></div>
           <div class="envelope-line line-bottom-left"></div>
           <div class="envelope-line line-bottom-right"></div>
 
-          <!-- BOTÓN DORADO -->
+          <!-- SELLO DORADO -->
           <button
             class="gold-seal"
             id="goldSeal"
             type="button"
             aria-label="Abrir invitación"
           >
-            <span>J</span>
-            <small>&</small>
-            <span>D</span>
+
+            <span class="seal-letter seal-j">
+              J
+            </span>
+
+            <span class="seal-amp">
+              &
+            </span>
+
+            <span class="seal-letter seal-d">
+              D
+            </span>
+
           </button>
 
         </div>
 
       </div>
+
 
       <!-- INDICACIÓN -->
 
@@ -133,14 +99,20 @@
         </p>
 
         <small>
-          Toca el boton dorado
+          Toca o desliza hacia arriba
         </small>
+
+        <div class="opening-arrow">
+          ↑
+        </div>
 
       </div>
 
     </div>
 
   </div>
+
+
 
   <!-- ==================================================
        PORTADA PRINCIPAL
@@ -156,10 +128,13 @@
         Nos casamos
       </p>
 
-       <h1 class="couple-name">
-         <span class="name-first">Javiera</span>
-        <span class="name-second">& Daniel</span>
-       </h1>
+      <h1>
+        Javiera
+
+        <span>&</span>
+
+        Daniel
+      </h1>
 
       <div class="hero-line"></div>
 
@@ -171,6 +146,15 @@
         16:00 hrs
       </p>
 
+      <a
+        href="#contador"
+        class="hero-scroll"
+      >
+        Ver invitación
+
+        <span>↓</span>
+      </a>
+
     </div>
 
   </header>
@@ -178,6 +162,8 @@
 
 
   <main>
+
+
     <!-- ==================================================
          MENSAJE
     =================================================== -->
@@ -206,6 +192,7 @@
     </section>
 
 
+
     <!-- ==================================================
          FOTOS DE NIÑOS
     =================================================== -->
@@ -220,9 +207,14 @@
             Un pequeño recuerdo
           </p>
 
+          <h2>
+            Javiera & Daniel
+          </h2>
+
           <div class="title-line"></div>
 
         </div>
+
 
         <div class="childhood-grid">
 
@@ -232,13 +224,19 @@
           <div class="child-card">
 
             <div class="photo-placeholder">
-              <img src="Img/Javiera2.jpeg" alt="fotojaviera">
+
+              <span>
+                Foto Javiera
+              </span>
+
             </div>
+
             <h3>
               Javiera
             </h3>
 
           </div>
+
 
           <div class="child-heart">
             ♡
@@ -250,7 +248,11 @@
           <div class="child-card">
 
             <div class="photo-placeholder">
-              <img src="Img/Daniel.jpeg" alt="fotoDaniel">
+
+              <span>
+                Foto Daniel
+              </span>
+
             </div>
 
             <h3>
@@ -264,6 +266,8 @@
       </div>
 
     </section>
+
+
 
     <!-- ==================================================
          CUENTA REGRESIVA
@@ -350,73 +354,89 @@
 
     </section>
 
+
+
     <!-- ==================================================
-         FECHA
+         FECHA CON FOTOS
     =================================================== -->
-<section class="date-section">
 
-  <div class="container date-layout">
+    <section class="date-section">
 
-    <!-- FOTO IZQUIERDA -->
-    <div class="date-photo date-photo-left">
-      <img
-        src="Img/Piojosos1.jpeg"
-        alt="Javiera"
-      >
-    </div>
+      <div class="container date-layout">
 
 
-    <!-- FECHA CENTRAL -->
-    <div class="date-center">
+        <!-- FOTO IZQUIERDA -->
 
-      <div class="date-content">
+        <div class="date-photo date-photo-left">
 
-        <span class="date-day">
-          06
-        </span>
+          <img
+            src="Img/foto-javiera.jpg"
+            alt="Javiera"
+          >
 
-        <div class="date-divider"></div>
+        </div>
 
-        <div class="date-info">
 
-          <span>
-            Marzo
-          </span>
+        <!-- FOTO DERECHA -->
 
-          <strong>
-            2027
-          </strong>
+        <div class="date-photo date-photo-right">
+
+          <img
+            src="Img/foto-daniel.jpg"
+            alt="Daniel"
+          >
+
+        </div>
+
+
+        <!-- FECHA CENTRAL -->
+
+        <div class="date-center">
+
+          <div class="date-content">
+
+            <span class="date-day">
+              06
+            </span>
+
+            <div class="date-divider"></div>
+
+            <div class="date-info">
+
+              <span>
+                Marzo
+              </span>
+
+              <strong>
+                2027
+              </strong>
+
+            </div>
+
+          </div>
+
+          <p class="date-time">
+            Sábado · 16:00 hrs
+          </p>
 
         </div>
 
       </div>
 
-      <p class="date-time">
-        Sábado · 16:00 hrs
-      </p>
-
-    </div>
+    </section>
 
 
-    <!-- FOTO DERECHA -->
-    <div class="date-photo date-photo-right">
-      <img
-        src="Img/Piojosos3.jpeg"
-        alt="Daniel"
-      >
-    </div>
-
-  </div>
-
-</section>
 
     <!-- ==================================================
          ITINERARIO
     =================================================== -->
 
     <section class="timeline-section">
+
       <div class="container">
+
         <div class="section-title">
+
           <p>
             Nuestro día
           </p>
@@ -445,10 +465,23 @@
                   viewBox="0 0 64 64"
                   aria-hidden="true"
                 >
-                  <path d="M18 54V26l14-12 14 12v28" />
-                  <path d="M25 54V37h14v17" />
-                  <path d="M32 14V6" />
-                  <path d="M28 10h8" />
+
+                  <path
+                    d="M18 54V26l14-12 14 12v28"
+                  />
+
+                  <path
+                    d="M25 54V37h14v17"
+                  />
+
+                  <path
+                    d="M32 14V6"
+                  />
+
+                  <path
+                    d="M28 10h8"
+                  />
+
                 </svg>
 
               </div>
@@ -473,6 +506,7 @@
             </div>
 
           </div>
+
 
 
           <!-- RESTAURANTE -->
@@ -528,6 +562,7 @@
           </div>
 
 
+
           <!-- FIESTA -->
 
           <div class="timeline-item">
@@ -546,8 +581,11 @@
                   />
 
                   <path d="M48 11v10" />
+
                   <path d="M43 16h10" />
+
                   <path d="M15 43v8" />
+
                   <path d="M11 47h8" />
 
                 </svg>
@@ -567,7 +605,7 @@
               </h3>
 
               <p>
-                Terminamos en el quincho
+                Terminamos la noche
                 celebrando, bailando
                 y disfrutando juntos.
               </p>
@@ -661,6 +699,7 @@
 
         </div>
 
+
         <div class="dress-image-container">
 
           <img
@@ -742,21 +781,30 @@
 
     </section>
 
+
+
     <!-- ==================================================
          CIERRE
     =================================================== -->
+
     <footer class="footer">
+
       <div class="container">
+
         <p class="footer-small">
           Gracias por acompañarnos
         </p>
 
-       <h2 class="couple-name">
-         <span class="name-first">Javiera</span>
-        <span class="name-second">& Daniel</span>
-       </h2>
+        <h2>
+          Javiera
+
+          <span>&</span>
+
+          Daniel
+        </h2>
 
         <div class="footer-line"></div>
+
         <p class="footer-date">
           06 · 03 · 2027
         </p>
@@ -764,8 +812,11 @@
         <p class="footer-place">
           Algarrobo · Chile
         </p>
+
       </div>
+
     </footer>
+
 
   </main>
 
@@ -774,4 +825,5 @@
   <script src="Script.js"></script>
 
 </body>
+
 </html>

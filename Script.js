@@ -21,8 +21,7 @@ const secondsElement =
 
 function updateCountdown() {
 
-  const now =
-    new Date();
+  const now = new Date();
 
   const difference =
     weddingDate.getTime() -
@@ -37,6 +36,7 @@ function updateCountdown() {
     secondsElement.textContent = "00";
 
     return;
+
   }
 
 
@@ -76,17 +76,22 @@ function updateCountdown() {
   daysElement.textContent =
     String(days).padStart(3, "0");
 
+
   hoursElement.textContent =
     String(hours).padStart(2, "0");
 
+
   minutesElement.textContent =
     String(minutes).padStart(2, "0");
+
 
   secondsElement.textContent =
     String(seconds).padStart(2, "0");
 
 }
 
+
+/* Ejecutar contador */
 
 updateCountdown();
 
@@ -116,11 +121,6 @@ const goldSeal =
     "goldSeal"
   );
 
-const enterInvitationButton =
-  document.getElementById(
-    "enterInvitationButton"
-  );
-
 
 let cardOpened = false;
 
@@ -129,10 +129,15 @@ let touchStartY = 0;
 let touchEndY = 0;
 
 
-/* Bloquea el scroll al entrar */
+/* Bloquear scroll mientras está el sobre */
+
 document.body.style.overflow =
   "hidden";
 
+
+/* ======================================================
+   ABRIR SOBRE
+====================================================== */
 
 function openCard() {
 
@@ -140,122 +145,165 @@ function openCard() {
     return;
   }
 
+
   cardOpened = true;
+
+
+  /*
+    Activa la animación CSS
+    del sobre
+  */
 
   cardOpeningScreen.classList.add(
     "opening"
   );
 
-}
 
+  /*
+    Después de la animación
+    desaparece la pantalla inicial
+    y entramos directamente
+    a la invitación.
+  */
 
-/* Click en el sello */
-goldSeal.addEventListener(
-  "click",
-  (event) => {
-
-    event.stopPropagation();
-
-    openCard();
-
-  }
-);
-
-
-/* También permite tocar el sobre */
-cardCover.addEventListener(
-  "click",
-  openCard
-);
-
-
-
-/* ======================================================
-   DESLIZAR HACIA ARRIBA
-====================================================== */
-
-cardOpeningScreen.addEventListener(
-  "touchstart",
-  (event) => {
-
-    touchStartY =
-      event.touches[0].clientY;
-
-  },
-  {
-    passive: true
-  }
-);
-
-
-cardOpeningScreen.addEventListener(
-  "touchmove",
-  (event) => {
-
-    touchEndY =
-      event.touches[0].clientY;
-
-  },
-  {
-    passive: true
-  }
-);
-
-
-cardOpeningScreen.addEventListener(
-  "touchend",
-  () => {
-
-    const movement =
-      touchStartY -
-      touchEndY;
-
-
-    if (movement > 45) {
-
-      openCard();
-
-    }
-
-
-    touchStartY = 0;
-
-    touchEndY = 0;
-
-  }
-);
-
-
-
-/* ======================================================
-   ENTRAR A LA INVITACIÓN
-====================================================== */
-
-enterInvitationButton.addEventListener(
-  "click",
-  () => {
+  setTimeout(() => {
 
     cardOpeningScreen.classList.add(
       "finished"
     );
 
 
+    /* permitir scroll */
+
     document.body.style.overflow =
       "";
 
 
-    setTimeout(
-      () => {
+    /*
+      quitar completamente
+      la pantalla del sobre
+    */
 
-        cardOpeningScreen.style.display =
-          "none";
+    setTimeout(() => {
 
-      },
-      1000
-    );
+      cardOpeningScreen.style.display =
+        "none";
 
-  }
-);
+    }, 900);
+
+
+  }, 1100);
+
+}
+
+
+
+/* ======================================================
+   CLICK EN EL SELLO
+====================================================== */
+
+if (goldSeal) {
+
+  goldSeal.addEventListener(
+    "click",
+    (event) => {
+
+      /*
+        Evita que también se ejecute
+        el click del cardCover
+      */
+
+      event.stopPropagation();
+
+      openCard();
+
+    }
+  );
+
+}
+
+
+
+/* ======================================================
+   CLICK EN TODO EL SOBRE
+====================================================== */
+
+if (cardCover) {
+
+  cardCover.addEventListener(
+    "click",
+    openCard
+  );
+
+}
+
+
+
+/* ======================================================
+   DESLIZAR HACIA ARRIBA EN CELULAR
+====================================================== */
+
+if (cardOpeningScreen) {
+
+  cardOpeningScreen.addEventListener(
+    "touchstart",
+    (event) => {
+
+      touchStartY =
+        event.touches[0].clientY;
+
+      touchEndY =
+        touchStartY;
+
+    },
+    {
+      passive: true
+    }
+  );
+
+
+  cardOpeningScreen.addEventListener(
+    "touchmove",
+    (event) => {
+
+      touchEndY =
+        event.touches[0].clientY;
+
+    },
+    {
+      passive: true
+    }
+  );
+
+
+  cardOpeningScreen.addEventListener(
+    "touchend",
+    () => {
+
+      const movement =
+        touchStartY -
+        touchEndY;
+
+
+      /*
+        Si deslizó más de
+        45 píxeles hacia arriba
+      */
+
+      if (movement > 45) {
+
+        openCard();
+
+      }
+
+
+      touchStartY = 0;
+      touchEndY = 0;
+
+    }
+  );
+
+}
 
 
 
@@ -277,6 +325,7 @@ const elementsToAnimate =
 
 const observer =
   new IntersectionObserver(
+
     (entries) => {
 
       entries.forEach(
@@ -290,6 +339,7 @@ const observer =
               "visible"
             );
 
+
             observer.unobserve(
               entry.target
             );
@@ -300,9 +350,11 @@ const observer =
       );
 
     },
+
     {
-      threshold: .15
+      threshold: 0.15
     }
+
   );
 
 
@@ -312,6 +364,7 @@ elementsToAnimate.forEach(
     element.classList.add(
       "reveal"
     );
+
 
     observer.observe(
       element
@@ -323,7 +376,7 @@ elementsToAnimate.forEach(
 
 
 /* ======================================================
-   REGALOS
+   LISTA DE REGALOS
 ====================================================== */
 
 const giftButton =
